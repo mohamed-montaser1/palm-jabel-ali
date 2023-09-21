@@ -10,7 +10,7 @@
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    z-index: 10;
+    z-index: 1000;
   }
 }
 
@@ -112,13 +112,13 @@ nav.navbar {
         top: 0;
         z-index: 20;
         height: 100vh !important;
-        width: 300px;
+        width: 250px;
         &.active {
           right: 0;
         }
         .close-section {
           min-height: 66px;
-          border-bottom: 1px solid #333;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.105);
           display: flex !important;
           .close-menu-btn {
             color: #333;
@@ -135,7 +135,7 @@ nav.navbar {
             inline: 20px;
             block: 5px;
           }
-          border-bottom: 1px solid #333;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.105);
           align-items: center;
           a.nav-link {
             color: $white;

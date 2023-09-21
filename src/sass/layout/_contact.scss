@@ -22,6 +22,9 @@
           }
         }
         &:last-child {
+          @media (max-width: 624px) {
+            padding-inline: 20px !important;
+          }
           padding: {
             block: 70px;
             right: 100px;
