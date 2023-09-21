@@ -1,0 +1,48 @@
+.amenities {
+  background: {
+    image: url("~/public/Amenities.jpg");
+    position: center;
+    size: cover;
+  }
+  width: 100%;
+  min-height: 732px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0px 60px 0px;
+  .container {
+    height: 100%;
+    h2 {
+      color: #ffffff;
+      text-align: center;
+      font: {
+        size: 60px;
+        family: "Cazin";
+      }
+    }
+    p {
+      font-family: "Poppins", Sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #ffffff;
+    }
+    > p {
+      text-align: center;
+    }
+    .amenities-card {
+      text-align: center;
+      padding: 10px;
+      margin: {
+        block: 20px;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      img {
+        width: 120px;
+        aspect-ratio: 1/1;
+        margin-inline: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.brochure {
+  background-color: #276098;
+  margin-block: 0 !important;
+  padding: 70px 0px 70px 0px;
+  .container {
+    .row {
+      @media (max-width: 991px) {
+        text-align: center;
+      }
+      h2 {
+        color: #ffffff;
+        line-height: 1.3em;
+        font: {
+          size: 45px;
+          weight: 400;
+          family: "Minerva Modern Regular";
+        }
+        @media (max-width: 991px) {
+          font-size: 35px;
+          display: block;
+          width: 100%;
+        }
+      }
+      div.col-sm-12 {
+        &:last-child {
+          display: flex;
+          gap: 40px;
+          align-items: center;
+          button {
+            cursor: pointer;
+            background-color: white;
+            color: #363636;
+            font: {
+              size: 14px;
+              family: "Roboto";
+            }
+            padding: {
+              block: 20px;
+              inline: 40px;
+            }
+            border-radius: 50px;
+            border: none;
+          }
+          @media (max-width: 991px) {
+            justify-content: center;
+          }
+          @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 10px !important;
+          }
+        }
+
+        @media (max-width: 991px) {
+          &:first-child {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Minerva Modern Regular";
+  src: url("~/fonts/minerva-modern/T-26\ -\ Minerva\ Modern\ Regular.otf");
+}
+.overview {
+  margin-block: 80px;
+  .container {
+    @media (min-width: 991px) {
+      display: flex;
+      justify-content: space-between;
+    }
+    h2 {
+      color: #316ba4;
+      line-height: 1.4em;
+      font: {
+        size: 45px;
+        family: "Minerva Modern Regular";
+        weight: 400;
+      }
+      padding-inline: 10px;
+    }
+    div {
+      p {
+        font-size: 100%;
+        color: rgb(89, 89, 89);
+        padding-inline: 10px;
+      }
+    }
+  }
+}

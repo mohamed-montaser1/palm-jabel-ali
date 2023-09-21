@@ -1,0 +1,82 @@
+section.location {
+  min-height: 584px;
+  margin-block-end: 0 !important;
+  background: {
+    image: url("~/public/PalmJabalAli-Location.jpg");
+    position: center;
+    size: cover;
+    attachment: fixed;
+  }
+  padding: {
+    top: 70px;
+    bottom: 60px;
+  }
+  .row {
+    .col-sm-12 {
+      h2 {
+        color: #ffffff;
+        font-size: 50px;
+        line-height: 1.3em;
+        font-family: "Minerva Modern Regular" !important;
+      }
+      p {
+        color: white;
+        font: {
+          family: "Poppins", sans-serif;
+          size: 15px;
+          weight: 300;
+          style: normal;
+        }
+        line-height: 24px;
+      }
+      h4 {
+        font: {
+          family: "Poppins", sans-serif;
+          size: 15px;
+          style: normal;
+          weight: 300;
+        }
+        color: white;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0 !important;
+        li {
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 3px;
+          font: {
+            family: "Poppins", sans-serif;
+            size: 15px;
+            style: normal;
+            weight: 400;
+          }
+        }
+      }
+      .view-location-btn {
+        margin-top: 40px;
+        cursor: pointer;
+        background-color: white;
+        text-decoration: none;
+        color: #333;
+        width: fit-content;
+        font: {
+          size: 14px;
+          family: "Roboto";
+        }
+        padding: {
+          block: 20px;
+          inline: 40px;
+        }
+        border-radius: 50px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}

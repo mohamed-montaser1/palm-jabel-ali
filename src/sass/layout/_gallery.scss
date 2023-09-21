@@ -1,0 +1,105 @@
+.gallery {
+  height: 392px;
+  > .mySwiper1 {
+    width: 100%;
+    height: 100%;
+    .swiper-slide {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      height: 392px;
+      width: 40% !important;
+      cursor: pointer;
+      @media (max-width: 652px) {
+        width: 90% !important;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  > .overlay {
+    position: fixed;
+    inset: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    z-index: 10000;
+    &.active {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 0, 0);
+    }
+    .controllers {
+      height: 60px;
+      padding-inline: 20px;
+      display: flex;
+      align-items: center;
+      .swiper-pagination {
+        color: white;
+        text-align: left;
+        position: static;
+      }
+      button {
+        all: unset;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+      }
+    }
+    .swiper {
+      width: 100%;
+      .swiper-slide {
+        padding: {
+          inline: 20px;
+          bottom: 20px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        width: 100% !important;
+        cursor: pointer;
+        @media (max-width: 652px) {
+          width: 90%;
+        }
+        img {
+          display: block;
+          object-fit: cover;
+          height: 80%;
+          max-width: 100%;
+        }
+      }
+      .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        &::after {
+          display: none;
+        }
+        svg {
+          color: white;
+        }
+      }
+      .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        svg {
+          color: white;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,180 @@
+@use "../variables/transition" as *;
+@use "../variables/colors" as *;
+
+.navbar-popup-overlay {
+  width: 0;
+  height: 0;
+  &.active {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+  }
+}
+
+nav.navbar {
+  height: 110px;
+  transition: height $normal-transition-duration linear,
+    background-color $normal-transition-duration linear;
+  &.scrolled {
+    background-color: #276098;
+    height: 70px;
+    align-items: center !important;
+    .container {
+      a.navbar-brand {
+        img {
+          width: auto;
+          height: 54px;
+        }
+      }
+      .navbar-collapse {
+        ul.navbar-nav {
+          li.nav-item {
+            a.nav-link {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    a.navbar-brand {
+      margin-right: 20px;
+      img {
+        max-width: 240px;
+        width: 100px;
+        height: auto;
+        transition: height $normal-transition-duration linear;
+      }
+    }
+    button.navbar-toggler {
+      color: $white;
+      border: 1px solid $white;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      transition: color, border $fast-transition-duration ease-in-out;
+      outline: none;
+      box-shadow: none;
+      @media (max-width: 991px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &:hover {
+        border-color: $dark-white;
+        color: $dark-white;
+      }
+    }
+    .navbar-collapse {
+      &:not(.show) {
+        display: block;
+      }
+      .close-section {
+        display: none !important;
+      }
+      li {
+        a {
+          color: white;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          &::before {
+            content: "";
+            background: $white;
+            width: 0;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: width 300ms ease-in-out;
+          }
+        }
+        &:hover {
+          a {
+            &::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        transition: right $normal-transition-duration ease-in-out;
+        background-color: white;
+        position: fixed;
+        right: -300px;
+        top: 0;
+        z-index: 20;
+        height: 100vh !important;
+        width: 300px;
+        &.active {
+          right: 0;
+        }
+        .close-section {
+          min-height: 66px;
+          border-bottom: 1px solid #333;
+          display: flex !important;
+          .close-menu-btn {
+            color: #333;
+          }
+        }
+        ul {
+          gap: 0 !important;
+        }
+        li {
+          min-height: 50px;
+          display: flex;
+          align-items: center;
+          padding: {
+            inline: 20px;
+            block: 5px;
+          }
+          border-bottom: 1px solid #333;
+          align-items: center;
+          a.nav-link {
+            color: $white;
+            font-size: 13px;
+            transition: color $fast-transition-duration ease-in-out;
+            position: relative;
+            width: fit-content;
+            text-transform: uppercase;
+            &:hover {
+              color: $dark-white;
+              &::before {
+                width: 100%;
+              }
+            }
+          }
+          a {
+            color: #333 !important;
+            font-weight: 600;
+          }
+        }
+      }
+      ul.navbar-nav {
+        gap: 30px;
+        &.first {
+          margin-right: 20px;
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+        // Second Element
+        &.second {
+          .mobile-only {
+            display: none;
+            @media (max-width: 991px) {
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+  }
+}
